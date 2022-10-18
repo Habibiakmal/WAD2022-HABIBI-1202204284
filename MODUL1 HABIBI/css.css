@@ -1,0 +1,47 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+
+section article {
+    margin: 0 auto;
+}
+
+}
+.logo {
+    width: 200px;
+}
+
+.yutub {
+    justify-content: center; display: flex; align-items: center;
+}
+
+.AboutMe {
+    background-color:  rgb(225, 228, 232);
+    text-align: center;
+}
+
+.navbar-nav {
+    justify-content: center; display: flex; align-items: center;
+}
+
+.nav-item {
+    justify-content: center; display: flex; align-items: center;
+}
+
+.tentang-kami {
+    color: red;
+}
+
+.list {
+    color: blue;
+}
+
+.form {
+    text-align: center; align-items: center; justify-content: center;
+}
+
+
+.opsiinv {
+    color: blue;
+}
