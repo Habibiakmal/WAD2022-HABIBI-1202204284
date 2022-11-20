@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Nov 19, 2022 at 10:00 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 7.4.29
+-- Host: 127.0.0.1:4306
+-- Generation Time: Nov 20, 2022 at 03:53 PM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.0.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -37,13 +37,6 @@ CREATE TABLE `showroom_ema_table` (
   `foto_mobil` varchar(255) DEFAULT NULL,
   `status_pembayaran` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `showroom_ema_table`
---
-
-INSERT INTO `showroom_ema_table` (`id_mobil`, `nama_mobil`, `pemilik_mobil`, `merk_mobil`, `tanggal_beli`, `deskripsi`, `foto_mobil`, `status_pembayaran`) VALUES
-(19, 'Ferarri', 'Valdy', 'BMW', '2022-11-20', ' Mobil kenceng banget Keren juga', 'ferarri.jpg', 'Lunas');
 
 --
 -- Indexes for dumped tables
