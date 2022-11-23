@@ -12,7 +12,7 @@ $foto_mobil = $_FILES['foto_mobil']['name'];
 $path = "../asset/images/";
 
 if (move_uploaded_file($_FILES['foto_mobil']['tmp_name'], $path . $foto_mobil)) {
-  $addquery = "INSERT INTO showroomtable (nama_mobil, pemilik_mobil, merk_mobil, tanggal_beli, deskripsi, foto_mobil, status_pembayaran) VALUES ('$nama_mobil', '$nama_pemilik', '$merk_mobil', '$tanggal_beli', '$deskripsi', '$foto_mobil', '$status_bayar')";
+  $addquery = "INSERT INTO showroom_ema_table (nama_mobil, pemilik_mobil, merk_mobil, tanggal_beli, deskripsi, foto_mobil, status_pembayaran) VALUES ('$nama_mobil', '$nama_pemilik', '$merk_mobil', '$tanggal_beli', '$deskripsi', '$foto_mobil', '$status_bayar')";
   if (mysqli_query($conn, $addquery)) {
     header("location: ../pages/ListCar.php?pesan=succes");
   } else {

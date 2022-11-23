@@ -12,9 +12,9 @@ $foto_mobil = $_FILES['foto_mobil']['name'];
 
 $path = "../asset/images/";
 
-if ("SELECT foto_mobil FROM showroom_ema_table WHERE id_mobil = $id" != 0) {
+if ("SELECT foto_mobil FROM showroom_table WHERE id_mobil = $id" != 0) {
   if (move_uploaded_file($_FILES['foto_mobil']['tmp_name'], $path . $foto_mobil)) {
-    $editquery = "UPDATE showroom_ema_table SET nama_mobil = '$nama_mobil', pemilik_mobil = '$nama_pemilik', merk_mobil = '$merk_mobil', tanggal_beli = '$tanggal_beli', deskripsi = '$deskripsi', foto_mobil = '$foto_mobil', status_pembayaran = '$status_bayar' WHERE id_mobil = $id";
+    $editquery = "UPDATE showroom_table SET nama_mobil = '$nama_mobil', pemilik_mobil = '$nama_pemilik', merk_mobil = '$merk_mobil', tanggal_beli = '$tanggal_beli', deskripsi = '$deskripsi', foto_mobil = '$foto_mobil', status_pembayaran = '$status_bayar' WHERE id_mobil = $id";
     if (mysqli_query($conn, $editquery)) {
       header("location: ../pages/ListCar.php?pesan=update");
     } else {
@@ -24,7 +24,7 @@ if ("SELECT foto_mobil FROM showroom_ema_table WHERE id_mobil = $id" != 0) {
     header("location: ../pages/ListCar.php?pesan=failed");
   }
 } else {
-  $editquery = "UPDATE showroom_ema_table SET nama_mobil = '$nama_mobil', pemilik_mobil = '$nama_pemilik', merk_mobil = '$merk_mobil', tanggal_beli = '$tanggal_beli', deskripsi = '$deskripsi', status_pembayaran = '$status_bayar' WHERE id_mobil = $id";
+  $editquery = "UPDATE showroom_table SET nama_mobil = '$nama_mobil', pemilik_mobil = '$nama_pemilik', merk_mobil = '$merk_mobil', tanggal_beli = '$tanggal_beli', deskripsi = '$deskripsi', status_pembayaran = '$status_bayar' WHERE id_mobil = $id";
   if (mysqli_query($conn, $editquery)) {
     header("location: ../pages/ListCar.php?pesan=update");
   } else {
