@@ -6,7 +6,7 @@ $nama_pemilik = $_POST['nama_pemilik'];
 $merk_mobil = $_POST['merk_mobil'];
 $tanggal_beli = $_POST['tanggal_beli'];
 $deskripsi = $_POST['deskripsi'];
-$status_bayar = $_POST['status_bayar'];
+$status_bayar = $_POST['status_bayar']
 $foto_mobil = $_FILES['foto_mobil']['name'];
 
 $path = "../asset/images/";
