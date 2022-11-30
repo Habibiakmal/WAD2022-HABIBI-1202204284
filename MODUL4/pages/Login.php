@@ -1,7 +1,7 @@
 <?php
-require "../config/connector.php";
+
 session_start();
-if (isset($_COOKIE["email"]) && isset($_COOKIE["password"])) {
+if (!isset($_COOKIE["email"]) && isset($_COOKIE["password"])) {
   $email = $_COOKIE["email"];
   $password = $_COOKIE["password"];
   $result = mysqli_query($koneksi, "SELECT * FROM users WHERE email = '$email'");
@@ -20,7 +20,7 @@ if (isset($_POST["login"])) {
   //cek email  
   if (mysqli_num_rows($query) === 1) {
     //cek password
-    $data = mysqli_fetch_assoc($query);
+    $datas = mysqli_fetch_assoc($query);
     if (password_verify($password, $data["password"])) {
       // set seesion
       $_SESSION["login"] = true;
